@@ -1,0 +1,60 @@
+body{
+	font-family: sans-serif;
+}
+.WITKIT_logo img{
+	background-color: white;
+	border: 10px solid white;
+	border-radius: 10px;
+}
+.WITKIT_logo{
+	background-color: #143444;
+	text-align: center;
+	padding: 60px;
+}
+.lower{
+	background-color: #143444;
+	margin-top: 5px;
+	padding: 50px;
+}
+.to_register{
+	color: white;
+	text-align: center;
+}
+.register_link{
+	text-decoration: underline;
+	color: white;
+}
+.user_information{
+	background-color: white;
+	border: 2px solid lightgrey;
+	border-radius: 10px;
+	width: 300px;
+	margin: 10px auto;
+	padding: 30px 40px;
+	text-align: center;
+}
+.username_error{
+	color: red;
+}
+.password_error{
+	color: red;
+}
+.password_notice{
+	font-size: 12px;
+}
+.check{
+	text-align: center;
+}
+.check_button{
+	text-align: center;
+	color: white;
+	background-color: #143444;
+	border: 2px solid white;
+	border-radius: 4px;
+	width: 60px;
+	margin: 5px;
+}
+.password_notice{
+	color: grey;
+}
+

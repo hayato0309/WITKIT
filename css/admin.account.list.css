@@ -1,0 +1,103 @@
+body{
+	font-family: sans-serif;
+}
+.WITKIT_logo img{
+	background-color: white;
+	border: 10px solid white;
+	border-radius: 10px;
+}
+.WITKIT_logo{
+	background-color: #143444;
+	text-align: center;
+	padding: 60px;
+}
+.banner_backgcolor{
+	/*background: -moz-linear-gradient(to left,#FFF,#143444 50%,#FFF); 
+	background: -webkit-linear-gradient(to left,#FFF,#143444 50%,#FFF); 
+	background: linear-gradient(to left,#FFF,#143444 50%,#FFF); */
+	background-color: #143444;
+	margin: 5px auto;
+}
+.banner{
+	width: 680px;
+	height: 65px;
+	margin: 0px auto;
+	padding: 20px 40px;
+}
+.question_list{
+	background-color: #143444;
+	border: 2px solid white;
+	border-radius: 10px;
+	color: white;
+	text-align: center;
+	float: left;
+	width: 150px;
+	margin: 0 5px;
+	padding: 20px 30px;
+}
+.account_list{
+	background-color: #143444;
+	border: 2px solid white;
+	border-radius: 10px;
+	color: white;
+	text-align: center;
+	float: left;
+	width: 150px;
+	margin: 0 5px;
+	padding: 20px 30px;
+}
+.admin_logout{
+	background-color: #143444;
+	border: 2px solid white;
+	border-radius: 10px;
+	color: white;
+	text-align: center;
+	float: left;
+	width: 150px;
+	margin: 0 5px;
+	padding: 20px 30px;
+}
+.lower{
+	background-color: #143444;
+	margin-top: 5px;
+	padding: 60px;
+}
+.table{
+	background-color: white;
+	text-align: center;
+	margin: 0 auto;
+}
+
+tr:nth-child(odd) {background-color: #f2f2f2;}
+
+.no_accounts{
+	background-color: white;
+	border: 2px solid lightgrey;
+	border-radius: 10px;
+	width: 400px;
+	margin: 20px auto;
+	padding: 30px;
+	text-align: center;
+}
+.deleted_accounts{
+	background-color: #143444;
+	border: 2px solid white;
+	border-radius: 10px;
+	color: white;
+	text-align: center;
+	width: 250px;
+	margin: 0 auto;
+	padding: 5px;
+}
+.home{
+	text-align: center;
+}
+.home_button{
+	color: white;
+	background-color: #143444;
+	border: 2px solid white;
+	border-radius: 4px;
+	text-align: center;
+	width: 60px;
+	margin: 5px;
+}

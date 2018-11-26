@@ -1,0 +1,49 @@
+body{
+	font-family: sans-serif;
+}
+.WITKIT_logo img{
+	background-color: white;
+	border: 10px solid white;
+	border-radius: 10px;
+}
+.WITKIT_logo{
+	background-color: #143444;
+	text-align: center;
+	padding: 60px;
+}
+.lower{
+	background-color: #143444;
+	margin-top: 5px;
+	padding: 60px;
+	height: 350px;
+}
+.success{
+	background-color: white;
+	border: 2px solid lightgrey;
+	border-radius: 10px;
+	width: 400px;
+	margin: 20px auto;
+	padding: 30px;
+	text-align: center;
+}
+.error{
+	background-color: white;
+	border: 2px solid lightgrey;
+	border-radius: 10px;
+	width: 400px;
+	margin: 20px auto;
+	padding: 30px;
+	text-align: center;
+}
+.home{
+	text-align: center;
+}
+.home_button{
+	color: white;
+	background-color: #143444;
+	border: 2px solid white;
+	border-radius: 4px;
+	text-align: center;
+	width: 60px;
+	margin: 5px;
+}

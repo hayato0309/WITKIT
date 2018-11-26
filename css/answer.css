@@ -1,0 +1,134 @@
+body{
+	font-family: sans-serif;
+}
+.WITKIT_logo img{
+	background-color: white;
+	border: 10px solid white;
+	border-radius: 10px;
+}
+.WITKIT_logo{
+	background-color: #143444;
+	text-align: center;
+	padding: 60px;
+}
+.banner_backgcolor{
+	/*background: -moz-linear-gradient(to left,#FFF,#143444 50%,#FFF); 
+	background: -webkit-linear-gradient(to left,#FFF,#143444 50%,#FFF); 
+	background: linear-gradient(to left,#FFF,#143444 50%,#FFF); */
+	background-color: #143444;
+	margin: 5px auto;
+}
+.banner{
+	width: 900px;
+	height: 65px;
+	margin: 0px auto;
+	padding: 20px 40px;
+}
+.ask_question{
+	background-color: #143444;
+	border: 2px solid white;
+	border-radius: 10px;
+	color: white;
+	text-align: center;
+	float: left;
+	width: 150px;
+	margin: 0 5px;
+	padding: 20px 30px;
+}
+.question_list{
+	background-color: #143444;
+	border: 2px solid white;
+	border-radius: 10px;
+	color: white;
+	text-align: center;
+	float: left;
+	width: 150px;
+	margin: 0 5px;
+	padding: 20px 30px;
+}
+.edit_profile{
+	background-color: #143444;
+	border: 2px solid white;
+	border-radius: 10px;
+	color: white;
+	text-align: center;
+	float: left;
+	width: 150px;
+	margin: 0 5px;
+	padding: 20px 30px;
+}
+.logout{
+	background-color: #143444;
+	border: 2px solid white;
+	border-radius: 10px;
+	color: white;
+	text-align: center;
+	float: left;
+	width: 150px;
+	margin: 0 5px;
+	padding: 20px 30px;
+}
+.lower{
+	background-color: #143444;
+	margin-top: 5px;
+	padding: 60px;
+}
+.question_container{
+	background-color: white;
+	border: 2px solid lightgrey;
+	border-radius: 10px;
+	width: 400px;
+	margin: 20px auto;
+	padding: 30px;
+}
+.arrow{
+	text-align: center;
+}
+.answers{
+	background-color: white;
+	border: 2px solid lightgrey;
+	border-radius: 10px;
+	width: 400px;
+	margin: 20px auto;
+	padding: 30px;
+}
+.no_answers{
+	background-color: white;
+	border: 2px solid lightgrey;
+	border-radius: 10px;
+	text-align: center;
+	width: 400px;
+	margin: 20px auto;
+	padding: 30px;
+}
+.answer_container{
+	background-color: white;
+	border: 2px solid lightgrey;
+	border-radius: 10px;
+	width: 400px;
+	margin: 20px auto;
+	padding: 30px;
+}
+.answer_box{
+	text-align: center;
+}
+.buttons{
+	text-align: center;
+}
+.submit_button{
+	color: white;
+	background-color: #143444;
+	border: 2px solid white;
+	border-radius: 4px;
+	width: 60px;
+	margin: 5px;
+}
+.home_button{
+	color: white;
+	background-color: #143444;
+	border: 2px solid white;
+	border-radius: 4px;
+	width: 60px;
+	margin: 5px;
+}
+

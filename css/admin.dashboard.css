@@ -1,0 +1,56 @@
+body{
+	font-family: sans-serif;
+}
+.WITKIT_logo img{
+	background-color: white;
+	border: 10px solid white;
+	border-radius: 10px;
+}
+.WITKIT_logo{
+	background-color: #143444;
+	text-align: center;
+	padding: 60px;
+}
+.lower{
+	background-color: #143444;
+	margin-top: 5px;
+	padding: 60px;
+	height: 350px;
+}
+.links{
+	text-align: center;
+}
+a{
+	color: black;
+	text-decoration: none;
+}
+.questionlist{
+	border: 2px solid lightgrey;
+	border-radius: 10px;
+	background-color: #143444;
+	color: white;
+	width: 250px;
+	height: 50px;
+	margin: 10px auto;
+	padding-top: 25px;
+}
+.accountlist{
+	border: 2px solid lightgrey;
+	border-radius: 10px;
+	background-color: #143444;
+	color: white;
+	width: 250px;
+	height: 50px;
+	margin: 10px auto;
+	padding-top: 25px;
+}
+.logout{
+	border: 2px solid lightgrey;
+	border-radius: 10px;
+	background-color: #143444;
+	color: white;
+	width: 250px;
+	height: 50px;
+	margin: 10px auto;
+	padding-top: 25px;
+}
