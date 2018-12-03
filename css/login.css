@@ -15,6 +15,7 @@ body{
 	background-color: #143444;
 	margin-top: 5px;
 	padding: 60px;
+	height: 350px;
 }
 .user_information{
 	background-color: white;
@@ -43,6 +44,10 @@ body{
 	border: 1px solid white;
 	border-radius: 5px;
 	padding: 3px 10px;
+}
+.to_register{
+	color: white;
+	text-align: center;
 }
 .to_register{
 	color: white;

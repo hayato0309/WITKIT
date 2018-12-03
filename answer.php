@@ -84,7 +84,7 @@ if($accountid == 0){
 				</div>
 				<hr>
 				<div class="answer_box">
-					<textarea name="answer" rows="7" cols="63" placeholder="Write down your answer here!" maxlength="2000"></textarea>
+					<textarea name="answer" rows="7" cols="63" placeholder="Write down your answer here!" maxlength="2000" required></textarea>
 				</div>
 			</div>
 			<div class="buttons">

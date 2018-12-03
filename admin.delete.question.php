@@ -32,8 +32,8 @@ include 'dbconnect_myproject.php';
 		}
 	?>
 	<br>
-	<div class="home">
-			<a href="admin.dashboard.php"><input class="home_button" type="button" name="home" value="Home"></a>
+	<div class="back">
+			<a href="admin.question.list.php"><input class="back_button" type="button" name="back" value="Back"></a>
 	</div>
 </div>
 </body>

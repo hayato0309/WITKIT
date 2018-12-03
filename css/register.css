@@ -41,6 +41,7 @@ body{
 }
 .password_notice{
 	font-size: 12px;
+	color: grey;
 }
 .check{
 	text-align: center;
@@ -54,7 +55,5 @@ body{
 	width: 60px;
 	margin: 5px;
 }
-.password_notice{
-	color: grey;
-}
+
 

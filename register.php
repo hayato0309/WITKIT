@@ -15,12 +15,14 @@ include 'dbconnect_myproject.php';
 	</div>
 	<div class="lower">
 		<div class="to_register">
-			<div>If you already have your account, click <a class="register_link" href="login.php">here</a>.</div>
+			<div>
+				If you already have your account, click <a class="register_link" href="login.php">here</a>.
+			</div>
 		</div>
 		<br>
 		<form action="register_check.php" method="POST">
 			<div class="user_information">
-				<!-- username should be unique. if it's unique, the username will me displayed -->
+				<!-- username should be unique. if it's unique, the username will be displayed -->
 				<?php
 					if(!$_SESSION){
 						echo "<div>User Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type='text' name='username' maxlength='20' placeholder='User Name' size='25' autofocus required ></div><br>";

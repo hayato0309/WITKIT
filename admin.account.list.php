@@ -55,7 +55,7 @@ if(!$admin_name){
 							echo "<td>$username</td>";
 							echo "<td>$emailaddress</td>";
 							echo "<td>$password</td>";
-							echo "<form action='admin.delete.account.php' method='POST'>";
+							echo "<form action='admin.delete.account.confirmation.php' method='POST'>";
 							echo "<td><input type='hidden' name='delete' value='$accountid'>
 							  <input type='submit' value='Delete'></td>";
 						echo "</tr>";

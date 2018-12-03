@@ -92,6 +92,16 @@ p{
 	margin: 20px auto;
 	padding: 30px;
 }
+.username_error{
+	color: red;
+}
+.password_error{
+	color: red;
+}
+.password_notice{
+	font-size: 12px;
+	color: grey;
+}
 .register{
 	text-align: center;
 }

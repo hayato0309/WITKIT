@@ -32,6 +32,12 @@ session_start();
 				<input class="login_button" type="submit" name="login" value="Login">
 			</div>
 			<br>
+			<div class="to_register">
+				<div>
+				If you go to Register page, click <a class="register_link" href="register.php">here</a>.
+				</div>
+			</div>
+			<br>
 			<!-- <div class="loginSNS">
 				<div>Login with SNS</div><br>
 				<img src="../images/facebook.png">

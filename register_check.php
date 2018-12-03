@@ -24,11 +24,11 @@ $_SESSION["password2"] = $_POST["password2"];
 	<div class="lower">
 		<form action="register.confirmation.php" method="POST">
 			<div class="user_information">
-				<div>User Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="username" maxlength="20" placeholder="User Name" value="<?php echo $_SESSION['username']?>" size="25" autofocus required></div><br>
+				<div>User Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="username" maxlength="20" placeholder="User Name" value="<?php echo $_SESSION['username']?>" size="25" autofocus required readonly></div><br>
 
-				<div>Email Address&nbsp;&nbsp;&nbsp;<input type="email" name="emailaddress" maxlength="40" placeholder="Email Address" value="<?php echo $_SESSION['emailaddress']?>" size="25" autofocus required></div><br>
+				<div>Email Address&nbsp;&nbsp;&nbsp;<input type="email" name="emailaddress" maxlength="40" placeholder="Email Address" value="<?php echo $_SESSION['emailaddress']?>" size="25" autofocus required readonly></div><br>
 	  			
-	 			Password&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="password" id="password" name="password1" value="<?php echo $_SESSION['password1']?>" size="17"/>
+	 			Password&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="password" id="password" name="password1" value="<?php echo $_SESSION['password1']?>" size="17" readonly/>
 					<button type="button" onclick="if (password.type == 'text') password.type = 'password';
 	  				else password.type = 'text';">Show</button>
 
@@ -55,10 +55,12 @@ $_SESSION["password2"] = $_POST["password2"];
 
 			</div>
 			<br>
-			<div class="register">
-				<a href="resister.confirmation.php"><input class="register_button" type="submit" name="register" value="Register"></a>
+			<div class="buttons">
+				<a href="register.php"><input class="back_button" type="button" name="back" value="Back"></a>
+				<a href="register.confirmation.php"><input class="register_button" type="submit" name="	register" value="Register"></a>
 			</div>
 		</form>
+		</div>
 	</div>
 </body>
 </html>

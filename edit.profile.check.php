@@ -29,26 +29,16 @@ if($accountid == 0){
 	<div class="lower">
 		<form action="edit.profile.confirmation.php" method="POST">
 			<div class="user_information">
-				<div>User Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="username" maxlength="20" placeholder="User Name" value="<?php echo $_POST['username']?>" size="25" autofocus required></div><br>
+				<div>User Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="username" maxlength="20" placeholder="User Name" value="<?php echo $_POST['username']?>" size="25" autofocus required readonly></div><br>
 
-				<div>Email Address&nbsp;<input type="email" name="emailaddress" maxlength="40" placeholder="Email Address" value="<?php echo $_POST['emailaddress']?>" size="25" autofocus required></div><br>
+				<div>Email Address&nbsp;<input type="email" name="emailaddress" maxlength="40" placeholder="Email Address" value="<?php echo $_POST['emailaddress']?>" size="25" autofocus required readonly></div><br>
 	  			
-	 			Password&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="password" id="password" name="password1" value="<?php echo $_POST['password1']?>" size="17"/>
-					<button type="button" onclick="if (password.type == 'text') password.type = 'password';
-	  				else password.type = 'text';">Show</button>
+	 			Password&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="password" id="password" name="password1" value="<?php echo $_POST['password1']?>" size="17" readonly/>
+					<button type="button" onclick="if (password.type == 'text') password.type = 'password'; else password.type = 'text';">Show</button>
 
-				<?php
-					if($_POST){
-						$password1 = $_POST["password1"];
-						$password2 = $_POST["password2"];
-
-						if($password1 !== $password2){
-							header('Location: edit.profile.php');
-						}
-					}	
-				?>
 			</div>
-			<div class="register">
+			<div class="buttons">
+				<a href="edit.profile.php"><input class="back_button" type="button" name="back" value="Back"></a>
 				<a href="edit.profile.confirmation.php"><input class="register_button" type="submit" name="register" value="Register"></a>
 			</div>
 		</form>

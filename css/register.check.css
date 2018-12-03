@@ -36,6 +36,17 @@ body{
 .register{
 	text-align: center;
 }
+.buttons{
+	text-align: center;
+}
+.back_button{
+	color: white;
+	background-color: #143444;
+	border: 2px solid white;
+	border-radius: 4px;
+	width: 60px;
+	margin: 5px;
+}
 .register_button{
 	color: white;
 	background-color: #143444;
