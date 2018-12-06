@@ -33,6 +33,13 @@ body{
 	padding: 30px 40px;
 	text-align: center;
 }
+tr{
+	height: 55px;
+}
+.left_column{
+	width: 200px;
+	text-align: left;
+}
 .username_error{
 	color: red;
 }

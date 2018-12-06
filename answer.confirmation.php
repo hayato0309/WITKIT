@@ -20,8 +20,8 @@ include 'dbconnect_myproject.php';
 			$questionid = $_POST["questionid"];
 
 			// var_dump($questionid);
-
-			$sql = "INSERT INTO answer(UserName, Answer, QuestionID)VALUES('$username','$answer','$questionid')";
+			$escaped_answer = addslashes($answer);
+			$sql = "INSERT INTO answer(UserName, Answer, QuestionID)VALUES('$username','$escaped_answer','$questionid')";
 
 			    if($conn->query($sql) === TRUE){
 			        

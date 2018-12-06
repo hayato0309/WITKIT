@@ -24,12 +24,12 @@ include 'dbconnect_myproject.php';
 				$_SESSION['username'] = $informations['UserName'];
 				$_SESSION['emailaddress'] = $informations['EmailAddress'];
 				$_SESSION['deleted'] = $informations['deleted'];						
-		}
 
-		if($_SESSION['accountid'] == 0 || $_SESSION['deleted'] == 1){
-			header('Location: login.php');
-		} else{
-			header('Location: dashboard.php');
+				if($_SESSION['accountid'] == 0 || $_SESSION['deleted'] == 1){
+					header('Location: login.php');
+				} else{
+					header('Location: dashboard.php');
+				}
 		}
 
 	?>

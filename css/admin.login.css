@@ -23,8 +23,18 @@ body{
 	border-radius: 10px;
 	width: 300px;
 	margin: 20px auto;
-	padding: 40px 40px;
+	padding: 35px;
 	text-align: center;
+}
+tr{
+	height: 55px;
+}
+.left_column{
+	width: 200px;
+	text-align: left;
+}
+.error{
+	color: red;
 }
 .login{
 	text-align: center;

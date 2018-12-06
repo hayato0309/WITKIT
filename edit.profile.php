@@ -68,7 +68,7 @@ if(window.confirm("Are you sure you want to delete your account?"))
 
 					<div class="user_information">
 				<!-- username should be unique. if it's unique, the username will be displayed -->
-				<div>User Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="username" maxlength="20" placeholder="User Name" size="30" autofocus required ></div><br>
+				<div>User Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="edit_username" maxlength="20" placeholder="User Name" size="30" autofocus required ></div><br>
 
 				<div>Email Address&nbsp;&nbsp;&nbsp;<input type="email" name="emailaddress" maxlength="40" placeholder="Email Address" size="30" autofocus required></div><br>
 

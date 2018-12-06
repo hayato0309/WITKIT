@@ -20,7 +20,8 @@ include 'dbconnect_myproject.php';
 				$question = $_POST['question'];
 				$accountid = $_SESSION['accountid'];
 
-				$sql = "INSERT INTO question(UserName, Question, AccountID)VALUES('$username','$question','$accountid')";
+				$escaped_question = addslashes($question);
+				$sql = "INSERT INTO question(UserName, Question, AccountID)VALUES('$username','$escaped_question','$accountid')";
 
 	        if($conn->query($sql) === TRUE){
 	        	echo "<div class='success'>Record is updated successfully.</div>";

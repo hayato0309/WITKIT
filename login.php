@@ -1,6 +1,7 @@
 <?php
 session_start();
 
+
 // ログイン後に戻るボタンを押してもlogin画面に移動しない（未完成）
 // $accountid = $_SESSION['accountid'];
 // if($accountid !== 0){
@@ -21,10 +22,17 @@ session_start();
 	<div class="lower">
 		<form action="login.check.php" method="POST">
 			<div class="user_information">
-				<div>User Name&nbsp;&nbsp;&nbsp;<input type="text" name="username" maxlength="20" placeholder="User Name" size="25" autofocus required></div><br>
-
-				<div>Password&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="password" name="password" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" size="25" autofocus required></div><br>
-
+				<table>
+					<tr>
+						<td class="left_column">User Name</td>
+						<td><input type="text" name="username" maxlength="20" placeholder="User Name" size="25" autofocus required></td>
+					</tr>
+					<tr>
+						<td class="left_column">Password</td>
+						<td><input type="password" name="password" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" size="25" autofocus required></td>
+					</tr>
+				</table>
+				<br>
 				<div class="forgotpassword"><a class="forgotpassword_link" href="forgot.password.php">Forgot Password</a></div>
 			</div>
 

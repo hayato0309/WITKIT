@@ -6,6 +6,7 @@ $accountid = $_SESSION['accountid'];
 if($accountid == 0){
 	header('Location: login.php');
 }
+
 ?>
 
 <!DOCTYPE html>

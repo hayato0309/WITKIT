@@ -16,8 +16,23 @@ include 'dbconnect_myproject.php';
     <div class="lower">
 	    <form action="admin.login.check.php" method="POST">
 	    	<div class="admin_information">
-	    		<div>Admin Name&nbsp;&nbsp;<input type="text" name="admin_name" maxlength="20" placeholder="Admin Name" size="25" autofocus required></div><br>
-	    		<div>Password&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="password" name="admin_password" placeholder="Password" size="25" autofocus required></div>
+	    		<table>
+	    			<tr>
+	    				<td class="left_column">Admin Name</td>
+	    				<td><input type="text" name="admin_name" maxlength="20" placeholder="Admin Name" size="25" autofocus required></td>
+	    			</tr>
+	    			<tr>
+	    				<td class="left_column">Password</td>
+	    				<td><input type="password" name="admin_password" placeholder="Password" size="25" autofocus required></td>
+	    			</tr>
+	    		</table>
+
+	    		<?php
+	    			if($_SESSION){
+	    				echo "<div class='error'>Your Name or Password is incorrect.</div>";
+	    			}
+	    		?>
+
 	    	</div>
 	    	<div class="login">
 				<input class="login_button" type="submit" name="login" value="Login">
