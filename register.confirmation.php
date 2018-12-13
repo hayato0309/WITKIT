@@ -1,4 +1,5 @@
 <?php
+session_start();
 include 'dbconnect_myproject.php';
 ?>
 
@@ -35,6 +36,7 @@ include 'dbconnect_myproject.php';
 
             if($conn->query($sql) === TRUE){
                 echo "<div class='success'>Record is updated successfully.</div>";
+                session_destroy();
             }else{
                 echo "<div class='error'>Error during registration.</div>" . $conn->error;
             }

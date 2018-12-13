@@ -16,9 +16,11 @@ include 'dbconnect_myproject.php';
     <div class="lower">
 		<?php
 			$questionid = $_POST["edit"];
-			// var_dump($questionid);
 			$edit_question = $_POST["edit_question"];
-			$sql = "UPDATE question SET Question = '$edit_question' WHERE QuestionID = '$questionid'";
+
+			$escaped_question = addslashes($edit_question);
+			
+			$sql = "UPDATE question SET Question = '$escaped_question' WHERE QuestionID = '$questionid'";
 
 				if($conn->query($sql) === TRUE){
 				    echo "<div class='success'>Updating record was done successfully.</div>";

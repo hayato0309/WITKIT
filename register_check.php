@@ -27,7 +27,7 @@ $_SESSION["password2"] = $_POST["password2"];
 				<table>
 					<tr>
 						<td class="left_column">User Name</td>
-						<td colspan="2"><input type="text" name="username" maxlength="20" placeholder="User Name" value="<?php echo $_SESSION['username']?>" size="25" autofocus required readonly></td>
+						<td colspan="2"><input type="text" name="username" pattern=".*\S+.*" maxlength="20" placeholder="User Name" value="<?php echo $_SESSION['username']?>" size="25" autofocus required readonly></td>
 					</tr>
 					<tr>
 						<td class="left_column">Email Address</td>
@@ -48,6 +48,7 @@ $_SESSION["password2"] = $_POST["password2"];
 						$password2 = $_SESSION["password2"];
 
 						if($password1 !== $password2){
+							$_SESSION["wrong_password"] = "on";
 							header('Location: register.php');
 						}
 					}
@@ -59,6 +60,7 @@ $_SESSION["password2"] = $_POST["password2"];
 					$accountid = $result->fetch_assoc();
 
 					if($accountid){
+						$_SESSION["exist_username"] = "on";
 						header('Location: register.php');
 					}
 				?>

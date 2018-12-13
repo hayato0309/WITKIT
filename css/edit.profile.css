@@ -1,4 +1,5 @@
 body{
+	min-width: 1000px;
 	font-family: sans-serif;
 }
 .WITKIT_logo img{
@@ -90,12 +91,16 @@ p{
 	text-align: center;
 	width: 400px;
 	margin: 20px auto;
-	padding: 30px;
+	padding: 50px;
 }
-.username_error{
-	color: red;
+tr{
+	height: 55px;
 }
-.password_error{
+.left_column{
+	width: 200px;
+	text-align: left;
+}
+.error{
 	color: red;
 }
 .password_notice{
@@ -110,7 +115,7 @@ p{
 	border: 2px solid lightgrey;
 	border-radius: 10px;
 	text-align: center;
-	width: 400px;
+	width: 440px;
 	margin: 20px auto;
 	padding: 30px;
 }
@@ -126,9 +131,13 @@ p{
 	background-color: white;
 	border: 2px solid lightgrey;
 	border-radius: 10px;
-	width: 400px;
+	width: 440px;
 	margin: 20px auto;
 	padding: 30px 30px 10px 30px;
+}
+textarea{
+	width: 440px;
+	resize: vertical;
 }
 .q_username{
 	text-align: left;

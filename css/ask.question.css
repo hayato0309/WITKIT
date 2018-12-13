@@ -1,4 +1,5 @@
 body{
+	min-width: 1000px;
 	font-family: sans-serif;
 }
 .WITKIT_logo img{
@@ -98,6 +99,11 @@ body{
 }
 .question{
 	text-align: center;
+}
+textarea{
+	width: 390px;
+	height: 100px;
+	resize: vertical;
 }
 .buttons{
 	width: 60px;

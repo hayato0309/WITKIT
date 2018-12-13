@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 include 'dbconnect_myproject.php';
 
 $accountid = $_SESSION['accountid'];
@@ -66,20 +67,41 @@ if(window.confirm("Are you sure you want to delete your account?"))
 				<img src="images/arrow.navy.png" width="50">
 				<br><br>
 
-					<div class="user_information">
 				<!-- username should be unique. if it's unique, the username will be displayed -->
-				<div>User Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="edit_username" maxlength="20" placeholder="User Name" size="30" autofocus required ></div><br>
-
-				<div>Email Address&nbsp;&nbsp;&nbsp;<input type="email" name="emailaddress" maxlength="40" placeholder="Email Address" size="30" autofocus required></div><br>
-
-				<div>Password&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="password" name="password1" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" size="30" autofocus required> </div><br>
-
-				<div>Password*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="password" name="password2" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" size="30" autofocus required></div>
+				<table>
+					<tr>
+						<td class="left_column">User Name</td>
+						<td><input type="text" name="edit_username" maxlength="20" pattern="^[0-9A-Za-z]+$" placeholder="User Name" size="30" autofocus required ></td>
+					</tr>
+				</table>
+				<div class="error"><?php if(isset($_SESSION["exist_username"])){
+								echo "The name already exists.";
+								$_SESSION["exist_username"] = NULL;
+							}?>
+				</div>
+				<table>
+					<tr>
+						<td class="left_column">Email Address</td>
+						<td><input type="email" name="emailaddress" maxlength="40" placeholder="Email Address" size="30" autofocus required></td>
+					</tr>
+					<tr>
+						<td class="left_column">Password</td>
+						<td><input type="password" name="password1" maxlength="20" pattern="^[0-9A-Za-z]+$" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="Password" size="30" autofocus required></td>
+					</tr>
+					<tr>
+						<td class="left_column">Password*</td>
+						<td><input type="password" name="password2" maxlength="20" pattern="^[0-9A-Za-z]+$" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="Password" size="30" autofocus required></td>
+					</tr>
+				</table>
+				<div class="error"><?php if(isset($_SESSION["wrong_password"])){
+								echo "The passwords are not same.";
+								$_SESSION["wrong_password"] = NULL;
+							}?>
+				</div>
 				<br>
 				<div class="password_notice">*Password needs more than 8 characters with capital letter, small letter, and numbers.</div>
 
 				<!-- user's passwords must be same -->
-			</div>
 			</div>
 			<div class="register">
 				<input class="register_button" type="submit" name="register" value="Register">
@@ -121,7 +143,7 @@ if(window.confirm("Are you sure you want to delete your account?"))
 						<hr>
 						<form action='edit.question.confirmation.php' method='POST'>
 							<div class='question'>
-								<textarea name='edit_question' rows='7' cols='63'  maxlength='2000' required>$question</textarea>
+								<textarea name='edit_question' rows='7' cols='53'  maxlength='2000' required>$question</textarea>
 							</div>
 							<br>
 							<div class='edit_link'>

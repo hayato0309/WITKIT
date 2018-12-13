@@ -1,5 +1,6 @@
 <?php
 session_start();
+session_destroy();
 
 
 // ログイン後に戻るボタンを押してもlogin画面に移動しない（未完成）
@@ -25,17 +26,23 @@ session_start();
 				<table>
 					<tr>
 						<td class="left_column">User Name</td>
-						<td><input type="text" name="username" maxlength="20" placeholder="User Name" size="25" autofocus required></td>
+						<td><input type="text" name="username" maxlength="20" pattern="^[0-9A-Za-z]+$" placeholder="User Name" size="25" autofocus required></td>
 					</tr>
 					<tr>
 						<td class="left_column">Password</td>
-						<td><input type="password" name="password" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" size="25" autofocus required></td>
+						<td><input type="password" name="password" maxlength="20" placeholder="Password" pattern="^[0-9A-Za-z]+$" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" size="25" autofocus required></td>
 					</tr>
 				</table>
+
+				<?php
+				if(isset($_SESSION["wrong_info"])){
+					echo "<div class='error'>Your name or password is incorrect.</div>";
+				}
+				?>
+
 				<br>
 				<div class="forgotpassword"><a class="forgotpassword_link" href="forgot.password.php">Forgot Password</a></div>
 			</div>
-
 			<div class="login">
 				<input class="login_button" type="submit" name="login" value="Login">
 			</div>

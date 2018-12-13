@@ -1,5 +1,6 @@
 <?php
 session_start();
+session_destroy();
 include 'dbconnect_myproject.php';
 ?>
 
@@ -26,21 +27,14 @@ include 'dbconnect_myproject.php';
 				<table>
 					<tr>
 						<td class="left_column">User Name</td>
-						<td><input type='text' name='username' maxlength='20' placeholder='User Name' size='25' autofocus required ></td>
+						<td><input type='text' name='username' pattern="^[0-9A-Za-z]+$" maxlength='20' placeholder='User Name' size='25' autofocus required ></td>
 					</tr>
 				</table>
 					<div>
 						<?php
-							if($_SESSION){
-								$username = $_SESSION["username"];	
-								$sql = "SELECT AccountID FROM userinfo WHERE UserName = '$username'";
-								$result = $conn->query($sql);
-								// var_dump($result);
-								$accountid = $result->fetch_assoc();
-
-								if($accountid){
+							if(isset($_SESSION["exist_username"])){
 									echo "<div class='username_error'>Your username already exists.</div>";
-								}
+									$_SESSION["exist_username"] = NULL;
 							}
 						?>
 					</div>
@@ -56,21 +50,22 @@ include 'dbconnect_myproject.php';
 						</td>
 					<tr>
 						<td class="left_column">Password</td>
-						<td><input type="password" name="password1" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" size="25" autofocus required></td>
+						<td><input type="password" name="password1" placeholder="Password" maxlength="20" pattern="^[0-9A-Za-z]+$" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" size="25" autofocus required></td>
 					</tr>
 					<tr>
 						<td class="left_column">Password*</td>
-						<td><input type="password" name="password2" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" size="25" autofocus required></td>
+						<td><input type="password" name="password2" placeholder="Password" maxlength="20" pattern="^[0-9A-Za-z]+$" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" size="25" autofocus required></td>
 					</tr>
 				</table>
 					<div>
 						<?php
-							if($_SESSION){
+							if(isset($_SESSION["wrong_password"])){
 							$password1 = $_SESSION["password1"];
 							$password2 = $_SESSION["password2"];
 
 								if($password1 !== $password2){
 									echo "<div class='password_error'>Your passwords are not same.</div>";
+									$_SESSION["wrong_password"] = NULL;
 								}
 							}
 						?>

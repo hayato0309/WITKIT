@@ -1,3 +1,7 @@
+<?php
+	session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,9 +15,25 @@
 	<div class="lower">
 		<form action="send.email.php" method="POST">
 			<div class="user_information">
-				<div>User Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="username" maxlength="20" placeholder="User Name" size="25" autofocus required ></div><br>
-
-				<div>Email Address&nbsp;&nbsp;<input type="email" name="emailaddress" maxlength="40" placeholder="Email Address" size="25" autofocus required> </div>
+				<table>
+					<tr>
+						<td class="left_column">User Name</td>
+						<td><input type="text" name="username" maxlength="20" pattern="^[0-9A-Za-z]+$" placeholder="User Name" size="25" autofocus required ></td>
+					</tr>
+					<tr>
+						<td class="left_column">Email Address</td>
+						<td><input type="email" name="emailaddress" maxlength="40" placeholder="Email Address" size="25" autofocus required></td>
+					</tr>
+				</table>
+				<div>
+					<?php
+						if(isset($_SESSION["error"])){
+							// var_dump($_SESSION["error"]);
+							echo "<div class='error'>Your name or email address is incorrect.</div>";
+							$_SESSION["error"] = NULL;
+						}
+					?>
+				</div>
 			</div>
 			<div class="getpassword">
 				<input class="click_button" type="submit" name="getpassword" value="Click">

@@ -1,4 +1,5 @@
 body{
+	min-width: 1000px;
 	font-family: sans-serif;
 }
 .WITKIT_logo img{
@@ -32,6 +33,9 @@ tr{
 .left_column{
 	width: 200px;
 	text-align: left;
+}
+.error{
+	color: red;
 }
 .login{
 	text-align: center;

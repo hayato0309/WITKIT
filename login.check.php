@@ -26,12 +26,12 @@ include 'dbconnect_myproject.php';
 				$_SESSION['deleted'] = $informations['deleted'];						
 
 				if($_SESSION['accountid'] == 0 || $_SESSION['deleted'] == 1){
+					$_SESSION["wrong_info"] = "on";
 					header('Location: login.php');
 				} else{
 					header('Location: dashboard.php');
 				}
 		}
-
 	?>
 </body>
 </html>

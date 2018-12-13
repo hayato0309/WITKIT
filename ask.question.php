@@ -37,7 +37,7 @@ if($accountid == 0){
 				</div>
 				<hr>
 				<div class="question">
-					<textarea name="question" rows="7" cols="63" placeholder="What's your problem?" maxlength="2000" required></textarea>
+					<textarea name="question" rows="7" cols="54" placeholder="What's your problem?" maxlength="2000" required></textarea>
 				</div>
 			</div>
 			<div class="buttons">
