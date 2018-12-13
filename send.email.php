@@ -33,7 +33,7 @@ require 'PHPMailer-6.0.6/src/SMTP.php';
 			if($accountid == NULL || $deleted == 1){
 				// var_dump($accountid);
 				$_SESSION["error"] = "on";
-				// header('Location: forgot.password.php');
+				header('Location: forgot.password.php');
 			}else {
 				// var_dump($username);
 				// var_dump($password);

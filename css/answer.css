@@ -81,6 +81,7 @@ body{
 	width: 400px;
 	margin: 20px auto;
 	padding: 30px;
+	word-wrap: break-word;
 }
 .arrow{
 	text-align: center;

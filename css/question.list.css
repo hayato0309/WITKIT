@@ -89,8 +89,19 @@ p{
 	border: 2px solid lightgrey;
 	border-radius: 10px;
 	width: 400px;
+	/*overflow: scroll;*/
+	/*display: -webkit-box;
+  	-webkit-box-orient: vertical;
+  	-webkit-line-clamp: 4;*/
 	margin: 20px auto;
 	padding: 30px 30px 10px 30px;
+}
+.question{
+	word-wrap: break-word;
+	overflow: scroll;
+	display: -webkit-box;
+  	-webkit-box-orient: vertical;
+  	-webkit-line-clamp: 5;
 }
 .no_questions{
 	background-color: white;
