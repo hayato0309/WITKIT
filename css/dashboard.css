@@ -28,39 +28,54 @@ a{
 	border-radius: 10px;
 	background-color: #143444;
 	color: white;
-	width: 250px;
+	width: 400px;
 	height: 50px;
 	margin: 10px auto;
 	padding-top: 25px;
+	transition: all 0.5s;
+}
+.askquestion:hover{
+	background-color: #3483aa;
 }
 .questionlist{
 	border: 2px solid white;
 	border-radius: 10px;
 	background-color: #143444;
 	color: white;
-	width: 250px;
+	width: 400px;
 	height: 50px;
 	margin: 10px auto;
 	padding-top: 25px;
+	transition: all 0.5s;
 }
-
+.questionlist:hover{
+	background-color: #3483aa;
+}
 .editprofile{
 	border: 2px solid white;
 	border-radius: 10px;
 	background-color: #143444;
 	color: white;
-	width: 250px;
+	width: 400px;
 	height: 50px;
 	margin: 10px auto;
 	padding-top: 25px;
+	transition: all 0.5s;
+}
+.editprofile:hover{
+	background-color: #3483aa;
 }
 .logout{
 	border: 2px solid white;
 	border-radius: 10px;
 	background-color: #143444;
 	color: white;
-	width: 250px;
+	width: 400px;
 	height: 50px;
 	margin: 10px auto;
 	padding-top: 25px;
+	transition: all 0.5s;
+}
+.logout:hover{
+	background-color: #3483aa;
 }

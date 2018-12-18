@@ -15,12 +15,12 @@ include 'dbconnect_myproject.php';
     </div>
     <div class="lower">
 		<?php
-			$questionid = $_POST["edit_q"];
-			$edit_question = $_POST["edit_question"];
+			$answerid = $_POST["edit_a"];
+			$edit_answer = $_POST["edit_answer"];
 
-			$escaped_question = addslashes($edit_question);
+			$escaped_answer = addslashes($edit_answer);
 			
-			$sql = "UPDATE question SET Question = '$escaped_question' WHERE QuestionID = '$questionid'";
+			$sql = "UPDATE answer SET Answer = '$escaped_answer' WHERE AnswerID = '$answerid'";
 
 				if($conn->query($sql) === TRUE){
 				    echo "<div class='success'>Updating record was done successfully.</div>";

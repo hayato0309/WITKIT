@@ -46,4 +46,8 @@ body{
 	border-radius: 4px;
 	width: 60px;
 	margin: 5px;
+	transition: all 0.5s;
+}
+.home_button:hover{
+	background-color: #3483aa;
 }

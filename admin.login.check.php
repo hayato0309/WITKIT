@@ -18,6 +18,7 @@ include 'dbconnect_myproject.php';
 	$_SESSION['admin_password'] = $admin_password;
 
 	if($admin_name == "Hayato" && $admin_password == "19950309"){
+		$_SESSION["error"] = "on";
 		header('Location: admin.dashboard.php');
 	}else{
 		header('Location: admin.login.php');

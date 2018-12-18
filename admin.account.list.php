@@ -5,9 +5,10 @@ include 'dbconnect_myproject.php';
 $admin_name = $_SESSION["admin_name"];
 if(!$admin_name){
 	header('Location: admin.login.php');
-	// var_dump($admin_name);
 }
 ?>
+
+</script>
 
 <!DOCTYPE html>
 <html>
@@ -62,7 +63,6 @@ if(!$admin_name){
 						echo "</form>";
 					}
 				}
-				
 		}else{
 			echo "<div class='no_questions'>No accounts.</div>";
 		}

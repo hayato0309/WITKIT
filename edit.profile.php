@@ -26,7 +26,7 @@ $password = $informations['Password'];
 <script type="text/javascript">
 // <![CDATA[
 function yesno(){
-if(window.confirm("Are you sure you want to delete your account?"))
+if(window.confirm("Are you sure you want to delete your account?\nLater your account will be deleted."))
 	var accountid = document.getelementByid(accountid).value;
 	location.href = "delete.account.php?accountid="+accountid+"";
 } 
@@ -56,11 +56,11 @@ if(window.confirm("Are you sure you want to delete your account?"))
 
 		<form action="edit.profile.check.php" method="POST">
 			<div class="editprofile">
-				<div>User Name : <?php echo $username; ?></div>
+				<div>User Name &emsp;:&emsp; <?php echo $username; ?></div>
 				<hr><br>
-				<div>Email Address : <?php echo $emailaddress; ?></div>
+				<div>Email Address &emsp;:&emsp; <?php echo $emailaddress; ?></div>
 				<hr><br>
-				<div>Password : <?php echo $password; ?></div>
+				<div>Password &emsp;:&emsp; <?php echo $password; ?></div>
 				<hr>
 
 				<br>
@@ -68,31 +68,33 @@ if(window.confirm("Are you sure you want to delete your account?"))
 				<br><br>
 
 				<!-- username should be unique. if it's unique, the username will be displayed -->
-				<table>
-					<tr>
-						<td class="left_column">User Name</td>
-						<td><input type="text" name="edit_username" maxlength="20" pattern="^[0-9A-Za-z]+$" placeholder="User Name" size="30" autofocus required ></td>
-					</tr>
-				</table>
-				<div class="error"><?php if(isset($_SESSION["exist_username"])){
-								echo "The name already exists.";
-								$_SESSION["exist_username"] = NULL;
-							}?>
+				<div class="table">	
+					<table>
+						<tr>
+							<td class="left_column">User Name</td>
+							<td><input type="text" name="edit_username" maxlength="20" pattern="^[0-9A-Za-z]+$" placeholder="User Name" size="30" autofocus required ></td>
+						</tr>
+					</table>
+					<div class="error"><?php if(isset($_SESSION["exist_username"])){
+									echo "The name already exists.";
+									$_SESSION["exist_username"] = NULL;
+								}?>
+					</div>
+					<table>
+						<tr>
+							<td class="left_column">Email Address</td>
+							<td><input type="email" name="emailaddress" maxlength="40" placeholder="Email Address" size="30" autofocus required></td>
+						</tr>
+						<tr>
+							<td class="left_column">Password</td>
+							<td><input type="password" name="password1" maxlength="20" pattern="^[0-9A-Za-z]+$" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="Password" size="30" autofocus required></td>
+						</tr>
+						<tr>
+							<td class="left_column">Password*</td>
+							<td><input type="password" name="password2" maxlength="20" pattern="^[0-9A-Za-z]+$" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="Password" size="30" autofocus required></td>
+						</tr>
+					</table>
 				</div>
-				<table>
-					<tr>
-						<td class="left_column">Email Address</td>
-						<td><input type="email" name="emailaddress" maxlength="40" placeholder="Email Address" size="30" autofocus required></td>
-					</tr>
-					<tr>
-						<td class="left_column">Password</td>
-						<td><input type="password" name="password1" maxlength="20" pattern="^[0-9A-Za-z]+$" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="Password" size="30" autofocus required></td>
-					</tr>
-					<tr>
-						<td class="left_column">Password*</td>
-						<td><input type="password" name="password2" maxlength="20" pattern="^[0-9A-Za-z]+$" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="Password" size="30" autofocus required></td>
-					</tr>
-				</table>
 				<div class="error"><?php if(isset($_SESSION["wrong_password"])){
 								echo "The passwords are not same.";
 								$_SESSION["wrong_password"] = NULL;
@@ -135,7 +137,7 @@ if(window.confirm("Are you sure you want to delete your account?"))
 			if ($result->num_rows > 0){
 				while($row = $result->fetch_assoc()){
 					$questionid = $row['QuestionID'];
-					$username = $row['UserName'];
+					$username_question = $row['UserName'];
 					$question = $row['Question'];
 				
 				echo"<div class='editquestion'>
@@ -147,13 +149,13 @@ if(window.confirm("Are you sure you want to delete your account?"))
 							</div>
 							<br>
 							<div class='edit_link'>
-								<input type='hidden' name='edit' value=$questionid>
+								<input type='hidden' name='edit_q' value=$questionid>
 								<input class='edit_button' type='submit' value='Edit'>
 							</div>
 						</form>
 						<form action='delete.question.confirmation.php' method='POST'>
 							<div class='delete_link'>
-								<input type='hidden' name='delete' value=$questionid>
+								<input type='hidden' name='delete_q' value=$questionid>
 								<input class='delete_buton' type='submit' value='Delete'>
 							</div>
 						</form>
@@ -161,6 +163,45 @@ if(window.confirm("Are you sure you want to delete your account?"))
 				}
 			}else{
 				echo "<div class='no_questions'>No questions.</div>";
+			}
+			?>
+
+			<br>
+			<p>Your Answers</p>
+
+			<?php
+			$sql_answer = "SELECT * FROM answer WHERE UserName = '$username'";
+			$result_answer = $conn->query($sql_answer);
+
+			if ($result_answer->num_rows > 0){
+				while($row = $result_answer->fetch_assoc()){
+					$answerid = $row['AnswerID'];
+					$username_answer = $row['UserName'];
+					$answer = $row['Answer'];
+				
+				echo"<div class='editquestion'>
+						<div class='q_username'>User Name : $username_answer</div>
+						<hr>
+						<form action='edit.answer.confirmation.php' method='POST'>
+							<div class='question'>
+								<textarea name='edit_answer' rows='7' cols='53'  maxlength='2000' required>$answer</textarea>
+							</div>
+							<br>
+							<div class='edit_link'>
+								<input type='hidden' name='edit_a' value=$answerid>
+								<input class='edit_button' type='submit' value='Edit'>
+							</div>
+						</form>
+						<form action='delete.answer.confirmation.php' method='POST'>
+							<div class='delete_link'>
+								<input type='hidden' name='delete_a' value=$answerid>
+								<input class='delete_buton' type='submit' value='Delete'>
+							</div>
+						</form>
+					</div>";
+				}
+			}else{
+				echo "<div class='no_questions'>No answers.</div>";
 			}
 
 			?>

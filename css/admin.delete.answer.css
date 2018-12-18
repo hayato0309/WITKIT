@@ -48,4 +48,8 @@ body{
 	text-align: center;
 	width: 60px;
 	margin: 5px;
+	transition: all 0.5s;
+}
+.back_button:hover{
+	background-color: #3483aa;
 }

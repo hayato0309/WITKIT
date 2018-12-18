@@ -30,28 +30,40 @@ a{
 	border-radius: 10px;
 	background-color: #143444;
 	color: white;
-	width: 250px;
+	width: 400px;
 	height: 50px;
 	margin: 10px auto;
 	padding-top: 25px;
+	transition: all 0.5s;
+}
+.questionlist:hover{
+	background-color: #3483aa;
 }
 .accountlist{
 	border: 2px solid lightgrey;
 	border-radius: 10px;
 	background-color: #143444;
 	color: white;
-	width: 250px;
+	width: 400px;
 	height: 50px;
 	margin: 10px auto;
 	padding-top: 25px;
+	transition: all 0.5s;
+}
+.accountlist:hover{
+	background-color: #3483aa;
 }
 .logout{
 	border: 2px solid lightgrey;
 	border-radius: 10px;
 	background-color: #143444;
 	color: white;
-	width: 250px;
+	width: 400px;
 	height: 50px;
 	margin: 10px auto;
 	padding-top: 25px;
+	transition: all 0.5s;
+}
+.logout:hover{
+	background-color: #3483aa;
 }

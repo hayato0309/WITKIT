@@ -47,6 +47,10 @@ tr{
 	border-radius: 4px;
 	width: 60px;
 	margin: 5px;
+	transition: all 0.5s;
+}
+.login_button:hover{
+	background-color: #3483aa;
 }
 .forgotpassword_link{
 	background-color: #143444;
@@ -55,6 +59,10 @@ tr{
 	border: 1px solid white;
 	border-radius: 5px;
 	padding: 3px 10px;
+	transition: all 0.5s;
+}
+.forgotpassword_link:hover{
+	background-color: #3483aa;
 }
 .to_register{
 	color: white;

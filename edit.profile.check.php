@@ -72,6 +72,7 @@ if($_POST){
 					</tr>
 				</table>
 			</div>
+			<br>
 			<div class="buttons">
 				<a href="edit.profile.php"><input class="back_button" type="button" name="back" value="Back"></a>
 				<a href="edit.profile.confirmation.php"><input class="register_button" type="submit" name="register" value="Register"></a>

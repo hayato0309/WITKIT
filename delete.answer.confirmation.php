@@ -15,13 +15,12 @@ include 'dbconnect_myproject.php';
     </div>
     <div class="lower">
 		<?php
-			$questionid = $_POST["delete_q"];
+			$answerid = $_POST["delete_a"];
 			// var_dump($questionid);
-			$sql_answer = "DELETE FROM answer WHERE QuestionID = $questionid";
-			$sql_question = "DELETE FROM question WHERE QuestionID = $questionid";
+			$sql_answer = "DELETE FROM answer WHERE AnswerID = $answerid";
 
-				if($conn->query($sql_answer) === TRUE && $conn->query($sql_question) === TRUE){
-				    echo "<div class='success'>Your question was deleted successfully.</div>";
+				if($conn->query($sql_answer) === TRUE){
+				    echo "<div class='success'>Your answer was deleted successfully.</div>";
 				}else{
 				    echo "<div class='error'>Error during deleting.</div>" . $conn->error;
 				}

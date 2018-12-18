@@ -19,17 +19,18 @@ include 'dbconnect_myproject.php';
 	    		<table>
 	    			<tr>
 	    				<td class="left_column">Admin Name</td>
-	    				<td><input type="text" name="admin_name" maxlength="20" placeholder="Admin Name" size="25" autofocus required></td>
+	    				<td><input type="text" name="admin_name" maxlength="20" pattern="^[0-9A-Za-z]+$" placeholder="Admin Name" size="25" autofocus required></td>
 	    			</tr>
 	    			<tr>
 	    				<td class="left_column">Password</td>
-	    				<td><input type="password" name="admin_password" placeholder="Password" size="25" autofocus required></td>
+	    				<td><input type="password" name="admin_password" maxlength="20" placeholder="Password" pattern="^[0-9A-Za-z]+$" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="Password" size="25" autofocus required></td>
 	    			</tr>
 	    		</table>
 
 	    		<?php
-	    			if($_SESSION){
+	    			if(isset($_SESSION["error"])){
 	    				echo "<div class='error'>Your Name or Password is incorrect.</div>";
+	    				$_SESSION["error"] = NULL;
 	    			}
 	    		?>
 
