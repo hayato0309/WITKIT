@@ -62,7 +62,7 @@ if($_POST){
 					</tr>
 					<tr>
 						<td class="left_column">Email Address</td>
-						<td colspan="2"><input type="email" name="emailaddress" maxlength="40" placeholder="Email Address" value="<?php echo $_SESSION['emailaddress']?>" size="25" autofocus required readonly></td>
+						<td colspan="2"><input type="email" name="emailaddress" maxlength="40" placeholder="Email Address" value="<?php echo $_POST['emailaddress']?>" size="25" autofocus required readonly></td>
 					</tr>
 					<tr>
 						<td class="left_column">Password</td>

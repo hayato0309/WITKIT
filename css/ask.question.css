@@ -122,18 +122,28 @@ textarea{
 	resize: vertical;
 }
 .buttons{
-	width: 60px;
+	width: 150px;
+	height: 50px;
 	text-align: center;
 	margin: 0 auto;
 }
 input{
 	color: white;
+	font-size: 15px;
 	background-color: #143444;
 	border: 2px solid white;
 	border-radius: 4px;
-	width: 60px;
+	width: 150px;
+	height: 30px;
 	margin: 5px;
-	transition: all 0.5s;
+	transition: all 0.2s;
+	box-shadow: 0 5px white;
+}
+input:active {/*ボタンを押したとき*/
+    -ms-transform: translateY(5px);
+    -webkit-transform: translateY(5px);
+    transform: translateY(5px);/*下に動く*/
+    border-bottom: none;/*線を消す*/
 }
 input:hover{
 	background-color: #3483aa;

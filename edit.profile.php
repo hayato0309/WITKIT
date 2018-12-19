@@ -170,7 +170,7 @@ if(window.confirm("Are you sure you want to delete your account?\nLater your acc
 			<p>Your Answers</p>
 
 			<?php
-			$sql_answer = "SELECT * FROM answer WHERE UserName = '$username'";
+			$sql_answer = "SELECT * FROM answer WHERE AccountID = '$accountid'";
 			$result_answer = $conn->query($sql_answer);
 
 			if ($result_answer->num_rows > 0){

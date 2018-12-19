@@ -18,10 +18,11 @@ include 'dbconnect_myproject.php';
 	    	$username = $_SESSION["username"];
 			$answer = $_POST["answer"];
 			$questionid = $_POST["questionid"];
+			$accountid = $_SESSION["accountid"];
 
 			// var_dump($questionid);
 			$escaped_answer = addslashes($answer);
-			$sql = "INSERT INTO answer(UserName, Answer, QuestionID)VALUES('$username','$escaped_answer','$questionid')";
+			$sql = "INSERT INTO answer(UserName, Answer, QuestionID, AccountID)VALUES('$username','$escaped_answer','$questionid', '$accountid')";
 
 			    if($conn->query($sql) === TRUE){
 			        

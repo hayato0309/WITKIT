@@ -22,9 +22,9 @@ body{
 	background-color: white;
 	border: 2px solid lightgrey;
 	border-radius: 10px;
-	width: 300px;
-	margin: 0px auto;
-	padding: 20px 40px;
+	width: 400px;
+	margin: 0 auto;
+	padding: 20px 20px 20px 40px;
 	text-align: center;
 }
 tr{
@@ -49,18 +49,44 @@ tr{
 }
 .back_button{
 	color: white;
+	font-size: 15px;
 	background-color: #143444;
 	border: 2px solid white;
 	border-radius: 4px;
-	width: 60px;
+	width: 150px;
+	height: 50px;
 	margin: 5px;
+	transition: all 0.2s;
+	box-shadow: 0 5px white;
+}
+.back_button:active {/*ボタンを押したとき*/
+    -ms-transform: translateY(5px);
+    -webkit-transform: translateY(5px);
+    transform: translateY(5px);/*下に動く*/
+    border-bottom: none;/*線を消す*/
+}
+.back_button:hover{
+	background-color: #3483aa;
 }
 .register_button{
 	color: white;
+	font-size: 15px;
 	background-color: #143444;
 	border: 2px solid white;
 	border-radius: 4px;
-	width: 60px;
+	width: 150px;
+	height: 50px;
 	margin: 5px;
+	transition: all 0.2s;
+	box-shadow: 0 5px white;
+}
+.register_button:active {/*ボタンを押したとき*/
+    -ms-transform: translateY(4px);
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);/*下に動く*/
+    border-bottom: none;/*線を消す*/
+}
+.register_button:hover{
+	background-color: #3483aa;
 }
 
