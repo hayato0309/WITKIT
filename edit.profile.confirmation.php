@@ -15,8 +15,11 @@ include 'dbconnect_myproject.php';
     <div class="lower">
         <?php
         $username = $_POST["username"];
+        $_SESSION["username"] = $_POST["username"];
         $emailaddress = $_POST["emailaddress"];
+        $_SESSION["emailaddress"] = $_POST["emailaddress"];
         $password = $_POST["password1"];
+        $_SESSION["password"] = $_SESSION["password1"];
         $accountid = $_SESSION['accountid'];
       
         $sql = "UPDATE userinfo SET UserName = '$username', EmailAddress = '$emailaddress', Password = '$password' WHERE AccountID = $accountid";

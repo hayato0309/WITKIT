@@ -170,7 +170,7 @@ if(window.confirm("Are you sure you want to delete your account?\nLater your acc
 			<p>Your Answers</p>
 
 			<?php
-			$sql_answer = "SELECT * FROM answer WHERE AccountID = '$accountid'";
+			$sql_answer = "SELECT * FROM answer WHERE AccountID = $accountid";
 			$result_answer = $conn->query($sql_answer);
 
 			if ($result_answer->num_rows > 0){
@@ -180,7 +180,7 @@ if(window.confirm("Are you sure you want to delete your account?\nLater your acc
 					$answer = $row['Answer'];
 				
 				echo"<div class='editquestion'>
-						<div class='q_username'>User Name : $username_answer</div>
+						<div class='q_username'>User Name : $username</div>
 						<hr>
 						<form action='edit.answer.confirmation.php' method='POST'>
 							<div class='question'>
